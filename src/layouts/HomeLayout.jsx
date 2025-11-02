@@ -2,6 +2,8 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import LeftAside from '../components/LeftAside';
+import CategoryItems from '../components/CategoryItems';
+import { Outlet } from 'react-router';
 
 const HomeLayout = () => {
     return (
@@ -14,8 +16,8 @@ const HomeLayout = () => {
                 <aside className='col-span-3'>
                     <LeftAside></LeftAside>
                 </aside>
-                <section>
-                    
+                <section className='col-span-6'>
+                    <Outlet></Outlet>
                 </section>
             </main>
 

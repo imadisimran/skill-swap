@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useLoaderData, useParams } from 'react-router';
+import SkillCard from './SkillCard';
 
 const CategoryItems = () => {
+    const allData=useLoaderData()
+    const {id}=useParams()
+    // console.log(id)
+    const [categoryData,setCategoryData]=useState([])
+    useEffect(()=>{
+        const categoryData=allData.filter(data=>data.category_id===id)
+        setCategoryData(categoryData);
+    },[allData,id])
     return (
         <div>
-            
+            {categoryData.map(singleData=><SkillCard singleData={singleData} key={singleData.skillId}></SkillCard>)}
         </div>
     );
 };
