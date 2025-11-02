@@ -12,7 +12,7 @@ const CategoryItems = () => {
         setCategoryData(categoryData);
     },[allData,id])
     return (
-        <div>
+        <div className='grid grid-cols-2 gap-5'>
             {categoryData.map(singleData=><SkillCard singleData={singleData} key={singleData.skillId}></SkillCard>)}
         </div>
     );
