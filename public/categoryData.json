@@ -1,0 +1,37 @@
+[
+  {
+    "id": "creative_arts",
+    "name": "Creative Arts & Crafts",
+    "emoji": "🎨"
+  },
+  {
+    "id": "tech",
+    "name": "Technology & Digital",
+    "emoji": "💻"
+  },
+  {
+    "id": "academics_language",
+    "name": "Academics & Language",
+    "emoji": "📚"
+  },
+  {
+    "id": "health_wellness",
+    "name": "Health & Wellness",
+    "emoji": "🧘"
+  },
+  {
+    "id": "culinary_arts",
+    "name": "Culinary Arts",
+    "emoji": "🍳"
+  },
+  {
+    "id": "practical_home",
+    "name": "Practical & Home Skills",
+    "emoji": "🛠️"
+  },
+  {
+    "id": "business_professional",
+    "name": "Business & Professional",
+    "emoji": "💼"
+  }
+]
