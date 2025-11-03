@@ -2,9 +2,18 @@
 import { CgProfile } from "react-icons/cg";
 import { Link, NavLink } from "react-router";
 import AuthContext from "../contexts/AuthContext";
+import { use } from "react";
+import toast from "react-hot-toast";
 
 const Navbar = () => {
-  // const {name}=use(AuthContext)
+  const {user,logOut}=use(AuthContext)
+  const handleLogout=()=>{
+    logOut()
+    .then(()=>{
+      toast.success('Logout Successfully')
+    })
+    .catch(err=>console.log(err.message))
+  }
   // console.log(name)
   return (
     <nav className="shadow">
@@ -18,7 +27,10 @@ const Navbar = () => {
           <button className="btn btn-circle">
             <CgProfile size={40} />
           </button>
-          <Link to='/auth/login' className="btn btn-primary">Login</Link>
+
+          {user ? <button onClick={handleLogout} className="btn btn-primary">Logout</button>:<Link to='/auth/login' className="btn btn-primary">Login</Link>}
+
+          
         </div>
       </div>
     </nav>

@@ -46,7 +46,7 @@ const Register = () => {
           <label className="label">Password</label>
           <input name="password" type="password" className="input" placeholder="Password" />
 
-          <button className="btn btn-neutral mt-4">Login</button>
+          <button className="btn btn-neutral mt-4">Register</button>
           <p className="text-xs text-center">Already have an account?<Link className="text-red-500 font-bold" to='/auth/login'>Login</Link></p>
         </fieldset>
       </form>

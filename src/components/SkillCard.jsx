@@ -1,13 +1,14 @@
 import React from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
+import { Link } from "react-router";
 // ..
 AOS.init();
 
 // We receive the 'skill' object as a prop
 function SkillCard({ singleData }) {
   // Destructure the properties from the skill object for easier use
-  const { image, skillName, rating, price } = singleData;
+  const { image, skillName, rating, price,skillId } = singleData;
 
   return (
     <div data-aos='flip-left'>
@@ -46,7 +47,7 @@ function SkillCard({ singleData }) {
           </div>
 
           <div className="card-actions justify-end">
-            <button className="btn btn-primary w-full">View Details</button>
+            <Link to={`/skill/${skillId}`} className="btn btn-primary w-full">View Details</Link>
           </div>
         </div>
       </div>

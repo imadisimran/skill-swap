@@ -4,6 +4,7 @@ import Footer from '../components/Footer';
 import LeftAside from '../components/LeftAside';
 import CategoryItems from '../components/CategoryItems';
 import { Outlet } from 'react-router';
+import { Toaster } from 'react-hot-toast';
 
 const HomeLayout = () => {
     return (
@@ -22,6 +23,7 @@ const HomeLayout = () => {
             </main>
 
             <Footer></Footer>
+            <Toaster></Toaster>
         </>
     );
 };
