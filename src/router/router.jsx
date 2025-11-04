@@ -9,6 +9,7 @@ import SkillDetails from "../components/SkillDetails";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import ProfileLayout from "../layouts/ProfileLayout";
 import UpdateProfileForm from "../components/UpdateProfileForm";
+import Reset from "../pages/Reset";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       {
         path:'register',
         element:<Register></Register>
+      },
+      {
+        path:'reset',
+        element:<Reset></Reset>
       }
     ]
   },

@@ -23,7 +23,7 @@ const AuthProvider = ({ children }) => {
     return updateProfile(auth.currentUser,userInfo)
   }
 
-  const resetPasword=(email)=>{
+  const resetPassword=(email)=>{
     return sendPasswordResetEmail(auth,email)
   }
 
@@ -55,7 +55,7 @@ const AuthProvider = ({ children }) => {
     loading,
     setLoading,
     googleSignIn,
-    resetPasword
+    resetPassword
   };
   return <AuthContext value={authData}>{children}</AuthContext>;
 };
