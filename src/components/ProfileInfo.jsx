@@ -5,7 +5,7 @@ const ProfileInfo = () => {
   const { user } = use(AuthContext);
 
   return (
-    <div>
+    <div className="flex justify-center gap-5 mt-5">
       <img src={user?.photoURL}></img>
       <table>
         <tbody className="[&>tr>td:first-child]:font-bold">
