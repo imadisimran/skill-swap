@@ -7,6 +7,7 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import SkillDetails from "../components/SkillDetails";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import ProfileLayout from "../layouts/ProfileLayout";
 
 const router = createBrowserRouter([
   {
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
     element:<PrivateRoute>
       <SkillDetails></SkillDetails>
     </PrivateRoute>
+  },
+  {
+    path:'/profile',
+    element: <ProfileLayout></ProfileLayout>
   }
 ]);
 
