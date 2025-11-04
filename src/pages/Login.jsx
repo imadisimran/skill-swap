@@ -2,6 +2,7 @@ import React, { use } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
 import AuthContext from "../contexts/AuthContext";
 import toast from "react-hot-toast";
+import LoginSignUpWithGoogle from "../components/LoginSignUpWithGoogle";
 
 const Login = () => {
 
@@ -41,6 +42,7 @@ const Login = () => {
           <input name='password' type="password" className="input" placeholder="Password" />
 
           <button className="btn btn-neutral mt-4">Login</button>
+          <LoginSignUpWithGoogle state={location.state}></LoginSignUpWithGoogle>
           <p className="text-xs text-center">Don't have an account?<Link className="text-red-500 font-bold" to='/auth/register' state={location.state}>Register</Link></p>
         </fieldset>
       </form>
