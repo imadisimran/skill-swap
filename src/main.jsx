@@ -4,6 +4,7 @@ import "./index.css";
 import { RouterProvider } from "react-router";
 import router from "./router/router.jsx";
 import AuthProvider from "./contexts/AuthProvider.jsx";
+import 'tippy.js/dist/tippy.css';
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
