@@ -1,5 +1,6 @@
 import React, { use } from "react";
 import AuthContext from "../contexts/AuthContext";
+import { Link } from "react-router";
 
 const ProfileInfo = () => {
   const { user } = use(AuthContext);
@@ -19,7 +20,7 @@ const ProfileInfo = () => {
           </tr>
           <tr>
             <td colSpan={2}>
-              <button className="btn btn-primary w-full">Update Profile</button>
+              <Link to='/profile/update' className="btn btn-primary w-full">Update Profile</Link>
             </td>
           </tr>
         </tbody>

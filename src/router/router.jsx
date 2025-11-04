@@ -8,6 +8,7 @@ import Register from "../pages/Register";
 import SkillDetails from "../components/SkillDetails";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import ProfileLayout from "../layouts/ProfileLayout";
+import UpdateProfileForm from "../components/UpdateProfileForm";
 
 const router = createBrowserRouter([
   {
@@ -55,7 +56,13 @@ const router = createBrowserRouter([
     path:'/profile',
     element: <PrivateRoute>
       <ProfileLayout></ProfileLayout>
-    </PrivateRoute>
+    </PrivateRoute>,
+    children:[
+      {
+        path:'update',
+        element:<UpdateProfileForm></UpdateProfileForm>
+      }
+    ]
   }
 ]);
 
