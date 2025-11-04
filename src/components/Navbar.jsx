@@ -6,6 +6,7 @@ import { use } from "react";
 import toast from "react-hot-toast";
 import tippy from "tippy.js";
 import { FcButtingIn } from "react-icons/fc";
+import Tippy from "@tippyjs/react";
 
 const Navbar = () => {
   const { user, logOut } = use(AuthContext);
@@ -44,9 +45,11 @@ const Navbar = () => {
           </NavLink>
         </div>
         <div className="flex items-center gap-5">
-          <Link to='/profile' className="btn btn-circle">
+          <Tippy content={user?.displayName} disabled={!user}>
+            <Link to='/profile' className="btn btn-circle">
             {user ? <FcButtingIn id='profilePic' size={40} />:<CgProfile id="profilePic" size={40} />}
           </Link>
+          </Tippy>
 
           {user ? (
             <button onClick={handleLogout} className="btn btn-primary">

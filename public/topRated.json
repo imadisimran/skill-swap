@@ -1,0 +1,54 @@
+[
+  {
+    "skillId": 10,
+    "skillName": "Build Your Own PC Workshop",
+    "providerName": "Tom Riley",
+    "providerEmail": "tom.pc@skillswap.com",
+    "price": 50,
+    "rating": 5.0,
+    "slotsAvailable": 3,
+    "description": "Bring your components and I'll guide you through the building process.",
+    "image": "https://i.ibb.co.com/p6WfQfrh/Gemini-Generated-Image-c5c038c5c038c5c0-4.png",
+    "category_id": "tech",
+    "category": "Technology"
+  },
+  {
+    "skillId": 15,
+    "skillName": "Calculus I & II Tutoring",
+    "providerName": "Dr. Evelyn Reed",
+    "providerEmail": "e.reed.math@skillswap.com",
+    "price": 40,
+    "rating": 5.0,
+    "slotsAvailable": 1,
+    "description": "Private tutoring for university-level calculus. 10 years of experience.",
+    "image": "https://i.ibb.co.com/BVjphsZR/Gemini-Generated-Image-jg96wkjg96wkjg96.png",
+    "category_id": "academics_language",
+    "category": "Academics & Language"
+  },
+  {
+    "skillId": 37,
+    "skillName": "Resume & Cover Letter Review",
+    "providerName": "Aisha Khan",
+    "providerEmail": "a.khan.hr@skillswap.com",
+    "price": 25,
+    "rating": 5.0,
+    "slotsAvailable": 3,
+    "description": "Get professional feedback on your job application materials from an HR specialist.",
+    "image": "https://i.ibb.co.com/TBzjgGDg/Gemini-Generated-Image-ddbk20ddbk20ddbk.png",
+    "category_id": "business_professional",
+    "category": "Business & Professional"
+  },
+  {
+    "skillId": 41,
+    "skillName": "Salary Negotiation Workshop",
+    "providerName": "Aisha Khan",
+    "providerEmail": "a.khan.hr@skillswap.com",
+    "price": 35,
+    "rating": 5.0,
+    "slotsAvailable": 5,
+    "description": "Role-play and learn strategies to confidently ask for what you're worth.",
+    "image": "https://i.ibb.co.com/HfgrcBhQ/Gemini-Generated-Image-haiuyqhaiuyqhaiu-1.png",
+    "category_id": "business_professional",
+    "category": "Business & Professional"
+  }
+]

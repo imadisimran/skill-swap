@@ -23,8 +23,9 @@ const SkillDetails = () => {
       <div className="card card-side bg-base-100 w-11/12 mx-auto p-5 border border-gray-200">
         <figure>
           <img
-            src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
+            src={skillData.image}
             alt="Movie"
+            className="w-96"
           />
         </figure>
         <div className="card-body">
