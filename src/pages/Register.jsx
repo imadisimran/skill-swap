@@ -1,11 +1,13 @@
 import React, { use } from "react";
-import { Link } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import AuthContext from "../contexts/AuthContext";
 import toast from "react-hot-toast";
 
 const Register = () => {
 
   const {createAccountEmail,setUser,addUserNamePhoto}=use(AuthContext)
+  const location=useLocation();
+  const navigate=useNavigate()
 
   const handleSignUp=(event)=>{
     event.preventDefault()
@@ -22,6 +24,7 @@ const Register = () => {
       setUser(user)
       addUserNamePhoto({displayName:name,photoURL:url})
       toast.success('Registered Successfully')
+      navigate(location.state ? location.state : '/')
     })
     .catch(err=>{
       console.log(err.message)

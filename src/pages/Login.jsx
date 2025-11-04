@@ -1,5 +1,5 @@
 import React, { use } from "react";
-import { Link, useNavigate } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import AuthContext from "../contexts/AuthContext";
 import toast from "react-hot-toast";
 
@@ -7,6 +7,7 @@ const Login = () => {
 
   const {logIn,setUser}=use(AuthContext);
   const navigate=useNavigate();
+  const location=useLocation()
 
   const handleLogin=(event)=>{
     event.preventDefault()
@@ -18,9 +19,10 @@ const Login = () => {
       const user=result.user;
       setUser(user)
       toast.success('Login Successful')
-      navigate('/')
+      navigate(location.state ? location.state : '/')
     })
     .catch(err=>{
+      toast.error('Login Unsuccessfull')
       console.log(err.message)
     })
 
@@ -39,7 +41,7 @@ const Login = () => {
           <input name='password' type="password" className="input" placeholder="Password" />
 
           <button className="btn btn-neutral mt-4">Login</button>
-          <p className="text-xs text-center">Don't have an account?<Link className="text-red-500 font-bold" to='/auth/register'>Register</Link></p>
+          <p className="text-xs text-center">Don't have an account?<Link className="text-red-500 font-bold" to='/auth/register' state={location.state}>Register</Link></p>
         </fieldset>
       </form>
     </div>

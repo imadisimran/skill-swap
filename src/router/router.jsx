@@ -6,6 +6,7 @@ import HowItWorks from "../pages/HowItWorks";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import SkillDetails from "../components/SkillDetails";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -21,7 +22,8 @@ const router = createBrowserRouter([
         element:<CategoryItems></CategoryItems>,
         loader:()=>fetch('/skillData.json'),
       }
-    ]
+    ],
+    hydrateFallbackElement:<span className="loading loading-spinner loading-xl"></span>
   },
   {
     path:'/auth',
@@ -43,7 +45,10 @@ const router = createBrowserRouter([
   },
   {
     path:'/skill/:skillId',
-    element:<SkillDetails></SkillDetails>
+    loader:()=>fetch('/skillData.json'),
+    element:<PrivateRoute>
+      <SkillDetails></SkillDetails>
+    </PrivateRoute>
   }
 ]);
 
